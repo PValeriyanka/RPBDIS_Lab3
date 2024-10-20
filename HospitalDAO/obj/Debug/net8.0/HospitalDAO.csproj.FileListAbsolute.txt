@@ -1,0 +1,28 @@
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\bin\Debug\net8.0\HospitalDAO.deps.json
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\bin\Debug\net8.0\HospitalDAO.runtimeconfig.json
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\bin\Debug\net8.0\HospitalDAO.dll
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\bin\Debug\net8.0\HospitalDAO.pdb
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\HospitalDAO.csproj.AssemblyReference.cache
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\HospitalDAO.GeneratedMSBuildEditorConfig.editorconfig
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\HospitalDAO.AssemblyInfoInputs.cache
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\HospitalDAO.AssemblyInfo.cs
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\HospitalDAO.csproj.CoreCompileInputs.cache
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\HospitalDAO.dll
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\refint\HospitalDAO.dll
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\HospitalDAO.pdb
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\HospitalDAO.genruntimeconfig.cache
+D:\3-ий курс\РПБДИС Курсовой\HospitalDAO\obj\Debug\net8.0\ref\HospitalDAO.dll
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.csproj.AssemblyReference.cache
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.GeneratedMSBuildEditorConfig.editorconfig
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.AssemblyInfoInputs.cache
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.AssemblyInfo.cs
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.csproj.CoreCompileInputs.cache
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.dll
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\refint\HospitalDAO.dll
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.pdb
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\bin\Debug\net8.0\HospitalDAO.deps.json
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\bin\Debug\net8.0\HospitalDAO.runtimeconfig.json
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\bin\Debug\net8.0\HospitalDAO.dll
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\bin\Debug\net8.0\HospitalDAO.pdb
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.genruntimeconfig.cache
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\ref\HospitalDAO.dll
