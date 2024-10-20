@@ -26,3 +26,4 @@ D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\bin\Debug\net8.0\HospitalDAO.dl
 D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\bin\Debug\net8.0\HospitalDAO.pdb
 D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.genruntimeconfig.cache
 D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\ref\HospitalDAO.dll
+D:\3-ий курс\РПБДИС\Lab3\HospitalDAO\obj\Debug\net8.0\HospitalDAO.sourcelink.json
