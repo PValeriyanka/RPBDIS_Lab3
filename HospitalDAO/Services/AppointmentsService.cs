@@ -1,11 +1,6 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HospitalDAO.Data;
 using HospitalDAO.Models;
-using HospitalDAO.Data;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace HospitalDAO.Services
 {
@@ -14,13 +9,13 @@ namespace HospitalDAO.Services
         private readonly HospitalContext _dbContext = dbContext;
         private readonly IMemoryCache _memoryCache = memoryCache;
 
-        // Получение списка емкостей из базы
+        // Получение списка приемов из базы
         public IEnumerable<Appointment> GetAppointments(int rowsNumber)
         {
             return _dbContext.Appointments.Take(rowsNumber).ToList();
         }
 
-        // Добавление списка емкостей в кэш
+        // Добавление списка приемов в кэш
         public void AddAppointments(string cacheKey, int rowsNumber)
         {
             IEnumerable<Appointment> appointments = _dbContext.Appointments.Take(rowsNumber).ToList();
@@ -33,7 +28,7 @@ namespace HospitalDAO.Services
             }
         }
 
-        // Получение списка емкостей из кэша или из базы, если нет в кэше
+        // Получение списка приемов из кэша или из базы, если нет в кэше
         public IEnumerable<Appointment> GetAppointments(string cacheKey, int rowsNumber)
         {
             if (!_memoryCache.TryGetValue(cacheKey, out IEnumerable<Appointment> appointments))
@@ -51,7 +46,7 @@ namespace HospitalDAO.Services
         // Получение количества записей
         public int GetAppointmentsCount()
         {
-            return _dbContext.Appointments.Count();  
+            return _dbContext.Appointments.Count();
         }
     }
 }

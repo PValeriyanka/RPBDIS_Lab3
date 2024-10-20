@@ -1,26 +1,21 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HospitalDAO.Data;
 using HospitalDAO.Models;
-using HospitalDAO.Data;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace HospitalDAO.Services
 {
-    public class SpecializationsService(HospitalContext dbContext, IMemoryCache memoryCache) : ISpecializationsService 
-    {  
+    public class SpecializationsService(HospitalContext dbContext, IMemoryCache memoryCache) : ISpecializationsService
+    {
         private readonly HospitalContext _dbContext = dbContext;
         private readonly IMemoryCache _memoryCache = memoryCache;
 
-        // Получение списка емкостей из базы
+        // Получение списка специализаций из базы
         public IEnumerable<Specialization> GetSpecializations(int rowsNumber)
         {
             return _dbContext.Specializations.Take(rowsNumber).ToList();
         }
 
-        // Добавление списка емкостей в кэш
+        // Добавление списка специализаций в кэш
         public void AddSpecializations(string cacheKey, int rowsNumber)
         {
             IEnumerable<Specialization> specializations = _dbContext.Specializations.Take(rowsNumber).ToList();
@@ -33,7 +28,7 @@ namespace HospitalDAO.Services
             }
         }
 
-        // Получение списка емкостей из кэша или из базы, если нет в кэше
+        // Получение списка специализаций из кэша или из базы, если нет в кэше
         public IEnumerable<Specialization> GetSpecializations(string cacheKey, int rowsNumber)
         {
             if (!_memoryCache.TryGetValue(cacheKey, out IEnumerable<Specialization> specializations))

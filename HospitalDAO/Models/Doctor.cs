@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace HospitalDAO.Models;
 
-namespace HospitalDAO.Models;
-
-public partial class Doctor
+public partial class Doctor : IComparable<Doctor>
 {
     public int DoctorId { get; set; }
 
@@ -22,4 +19,10 @@ public partial class Doctor
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
     public virtual Specialization Specialization { get; set; } = null!;
+
+    public int CompareTo(Doctor other)
+    {
+        if (other == null) return 1;
+        return this.DoctorLastName.CompareTo(other.DoctorLastName);
+    }
 }

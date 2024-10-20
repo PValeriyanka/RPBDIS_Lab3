@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace HospitalDAO.Models;
+﻿namespace HospitalDAO.Models;
 
 public partial class Appointment
 {

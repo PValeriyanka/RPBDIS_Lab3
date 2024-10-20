@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿namespace HospitalDAO.Models;
 
-namespace HospitalDAO.Models;
-
-public partial class Diagnos
+public partial class Diagnos : IComparable<Diagnos>
 {
     public int DiagnosId { get; set; }
 
@@ -12,4 +9,10 @@ public partial class Diagnos
     public string? DiagnosDescription { get; set; }
 
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+
+    public int CompareTo(Diagnos other)
+    {
+        if (other == null) return 1;
+        return this.DiagnosName.CompareTo(other.DiagnosName);
+    }
 }

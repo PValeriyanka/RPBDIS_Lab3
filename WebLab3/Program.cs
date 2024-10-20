@@ -1,4 +1,3 @@
-using System;
 using HospitalDAO.Data;
 using HospitalDAO.Infrastructure;
 using HospitalDAO.Models;
@@ -17,13 +16,12 @@ namespace WebLab3
             var builder = WebApplication.CreateBuilder(args);
 
             var services = builder.Services;
-            // внедрение зависимости для доступа к БД с использованием EF
-            //string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-
+            
+            // Внедрение зависимости для доступа к БД с использованием EF
             IConfigurationRoot configuration = builder.Configuration.AddUserSecrets<Program>().Build();
             string connectionString = configuration.GetConnectionString("RemoteSQLConnection");
 
-            //Считываем пароль и имя пользователя из secrets.json
+            // Получение пароя и имени пользователя из secrets.json
             string secretPass = configuration["Database:password"];
             string secretUser = configuration["Database:login"];
             SqlConnectionStringBuilder sqlConnectionStringBuilder = new(connectionString)
@@ -36,38 +34,38 @@ namespace WebLab3
 
             services.AddDbContext<HospitalContext>(options => options.UseSqlServer(connectionString));
 
-            // добавление кэширования
+            // Добавление кэширования
             services.AddMemoryCache();
 
-            // добавление поддержки Cookies
+            // Добавление поддержки Cookies
             services.AddHttpContextAccessor();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-            // добавление поддержки Session
+            // Добавление поддержки Session
             services.AddDistributedMemoryCache();
             services.AddSession();
 
-            // внедрение зависимости AppointmentsService
+            // Внедрение зависимости AppointmentsService
             services.AddScoped<IAppointmentsService, AppointmentsService>();
-            // внедрение зависимости DiagnosisService
+            // Внедрение зависимости DiagnosisService
             services.AddScoped<IDiagnosisService, DiagnosisService>();
-            // внедрение зависимости DoctorsService
+            // Внедрение зависимости DoctorsService
             services.AddScoped<IDoctorsService, DoctorsService>();
-            // внедрение зависимости MedicamentsService
+            // Внедрение зависимости MedicamentsService
             services.AddScoped<IMedicamentsService, MedicamentsService>();
-            // внедрение зависимости PatientsService
+            // Внедрение зависимости PatientsService
             services.AddScoped<IPatientsService, PatientsService>();
-            // внедрение зависимости ReceptionsService
+            // Внедрение зависимости ReceptionsService
             services.AddScoped<IReceptionsService, ReceptionsService>();
-            // внедрение зависимости SpecializationsService
+            // Внедрение зависимости SpecializationsService
             services.AddScoped<ISpecializationsService, SpecializationsService>();
 
             var app = builder.Build();
 
-            // добавляем поддержку статических файлов
+            // Добавление поддержки статических файлов
             app.UseStaticFiles();
 
-            // добавляем поддержку Session
+            // Добавление поддержки Session
             app.UseSession();
 
             // Вывод информации о клиенте
@@ -83,6 +81,7 @@ namespace WebLab3
                     strResponse += "<BR> Путь: " + context.Request.PathBase;
                     strResponse += "<BR> Протокол: " + context.Request.Protocol;
                     strResponse += "</BODY></HTML>";
+
                     // Вывод данных
                     await context.Response.WriteAsync(strResponse);
                 });
@@ -91,6 +90,7 @@ namespace WebLab3
 
 
             // Вывод кэшированной информации из таблиц базы данных
+
 
 
             // Вывод Specializations
@@ -391,7 +391,7 @@ namespace WebLab3
 
 
 
-            // Работа с Cookies 
+            // Работа с Cookies
 
 
 
@@ -399,124 +399,71 @@ namespace WebLab3
             {
                 appBuilder.Run(async (context) =>
                 {
+                    // Считывание из Cookies 
+                    string Doctor = context.Request.Cookies["DoctorId"];
+                    int DoctorId = !string.IsNullOrEmpty(Doctor) ? int.Parse(Doctor) : 0;
+                    string Patient = context.Request.Cookies["PatientId"];
+                    int PatientId = !string.IsNullOrEmpty(Patient) ? int.Parse(Patient) : 0;
+                    string Date = context.Request.Cookies["AppointmentDate"];
+                    DateOnly AppointmentDate = string.IsNullOrEmpty(Date) ? DateOnly.FromDateTime(DateTime.Now) : DateOnly.Parse(Date);
+                    string Diagnos = context.Request.Cookies["DiagnosId"];
+                    int DiagnosId = !string.IsNullOrEmpty(Diagnos) ? int.Parse(Diagnos) : 0;
 
-                    // Загрузка данных из куки
-                    string DoctorLastName = context.Request.Cookies["DoctorLastName"] ?? "";
-                    string DoctorFirstName = context.Request.Cookies["DoctorFirstName"] ?? "";
-                    string DoctorSurname = context.Request.Cookies["DoctorSurname"] ?? "";
-                    string specId = context.Request.Cookies["SpecializationId"];
-                    int SpecializationId = !string.IsNullOrEmpty(specId) ? int.Parse(specId) : 0;
-                    string ContactData = context.Request.Cookies["ContactData"] ?? "";
-                    string Password = context.Request.Cookies["Password"] ?? "";
+                    string strResponse = GenerateForm(context, DoctorId, PatientId, AppointmentDate, DiagnosId, "Cookies");
 
-                    var db = context.RequestServices.GetService<HospitalContext>();
-
-                    // Загрузить доступные специализации из базы данных
-                    List<Specialization> specializations = db.Specializations.ToList();
-
-                    // Формирование строки для вывода динамической HTML формы
-                    string strResponse = "<HTML><HEAD><TITLE>Cookies</TITLE></HEAD>" +
-                                         "<META http-equiv='Content-Type' content='text/html; charset=utf-8'/>" +
-                                         "<BODY><TABLE BORDER><TR><TH><A href='/'>Главная</A></TH></TR></TABLE><BR>" +
-                                         "<FORM action='/searchform1' method='POST'>" +
-                                         "Фамилия:<BR><INPUT type='text' name='DoctorLastName' value='" + DoctorLastName + "'><BR>" +
-                                         "Имя:<BR><INPUT type='text' name='DoctorFirstName' value='" + DoctorFirstName + "'><BR>" +
-                                         "Отчество:<BR><INPUT type='text' name='DoctorSurname' value='" + DoctorSurname + "'><BR>" +
-                                         "Специализация:<BR><SELECT name='SpecializationId'>";
-
-                    foreach (var specialization in specializations)
-                    {
-                        strResponse += $"<option value='{specialization.SpecializationId}'" +
-                                       $"{(SpecializationId == specialization.SpecializationId ? " selected" : "")}>" +
-                                       $"{specialization.SpecializationName}</option>";
-                    }
-
-                    strResponse += "</SELECT>" +
-                                   "<BR>Контактные данные:<BR><INPUT type='text' name='ContactData' value='" + ContactData + "'><BR>" +
-                                   "Пароль:<BR><INPUT type='text' name='Password' value='" + Password + "'><BR>" +
-                                   "<BR><INPUT type='submit' value='Сохранить в Cookies'>" +
-                                   "<INPUT type='submit' value='Показать'></FORM></BODY></HTML>";
-
+                    // Загрузка данных в Cookies
                     if (context.Request.Method == "POST")
                     {
-                        // Запись в Cookies данных объекта Doctor
-                        context.Response.Cookies.Append("DoctorLastName", context.Request.Form["DoctorLastName"]);
-                        context.Response.Cookies.Append("DoctorFirstName", context.Request.Form["DoctorFirstName"]);
-                        context.Response.Cookies.Append("DoctorSurname", context.Request.Form["DoctorSurname"]);
-                        context.Response.Cookies.Append("SpecializationId", context.Request.Form["SpecializationId"]);
-                        context.Response.Cookies.Append("ContactData", context.Request.Form["ContactData"]);
-                        context.Response.Cookies.Append("Password", context.Request.Form["Password"]);
+                        context.Response.Cookies.Append("DoctorId", context.Request.Form["DoctorId"]);
+                        context.Response.Cookies.Append("PatientId", context.Request.Form["PatientId"]);
+                        context.Response.Cookies.Append("AppointmentDate", context.Request.Form["AppointmentDate"]);
+                        context.Response.Cookies.Append("DiagnosId", context.Request.Form["DiagnosId"]);
                     }
 
-                    // Асинхронный вывод динамической HTML формы
                     await context.Response.WriteAsync(strResponse);
                 });
             });
 
 
 
-            // Работа с Session 
+            // Работа с Session
 
 
 
-            //Запоминание в Session значений, введенных в форме
-            app.Map("/searchform2", (appBuilder) => {
-                appBuilder.Run(async (context) => {
-                    // Считывание из Session объекта Doctor
-                    Doctor doctor = context.Session.Get<Doctor>("doctor") ?? new Doctor();
+            app.Map("/searchform2", (appBuilder) =>
+            {
+                appBuilder.Run(async (context) =>
+                {
+                    // Считывание из Session объекта Appointmment
+                    Appointment appointment = context.Session.Get<Appointment>("appointment") ?? new Appointment();
 
-                    var db = context.RequestServices.GetService<HospitalContext>();
-                    // Загрузить доступные специализации из базы данных
-                    List<Specialization> specializations = db.Specializations.ToList();
+                    string strResponse = GenerateForm(context, appointment.DoctorId, appointment.PatientId, appointment.AppointmentDate, appointment.DiagnosId, "Session");
 
-                    // Формирование строки для вывода динамической HTML формы
-                    string strResponse = "<HTML><HEAD><TITLE>Session</TITLE></HEAD>" +
-                                         "<META http-equiv='Content-Type' content='text/html; charset=utf-8'/>" +
-                                         "<BODY><TABLE BORDER><TR><TH><A href='/'>Главная</A></TH></TR></TABLE><BR>" +
-                                         "<FORM action='/searchform2' method='POST'>" +
-                                         "Фамилия:<BR><INPUT type='text' name='DoctorLastName' value='" + doctor.DoctorLastName + "'><BR>" +
-                                         "Имя:<BR><INPUT type='text' name='DoctorFirstName' value='" + doctor.DoctorFirstName + "'><BR>" +
-                                         "Отчество:<BR><INPUT type='text' name='DoctorSurname' value='" + doctor.DoctorSurname + "'><BR>" +
-                                         "Специализация:<BR><SELECT name='SpecializationId'>";
-
-                    foreach (var specialization in specializations)
-                    {
-                        strResponse += $"<option value='{specialization.SpecializationId}'" +
-                                       $"{(doctor.SpecializationId == specialization.SpecializationId ? " selected" : "")}>" +
-                                       $"{specialization.SpecializationName}</option>";
-                    }
-
-                    strResponse += "</SELECT>" +
-                                   "<BR>Контактные данные:<BR><INPUT type='text' name='ContactData' value='" + doctor.ContactData + "'><BR>" +
-                                   "Пароль:<BR><INPUT type='text' name='Password' value='" + doctor.Password + "'><BR>" +
-                                   "<BR><INPUT type='submit' value='Сохранить в Session'>" +
-                                   "<INPUT type='submit' value='Показать'></FORM></BODY></HTML>";
-
+                    // Загрузка данных в Session
                     if (context.Request.Method == "POST")
                     {
-                        // Запись в Session данных объекта Doctor
-                        doctor.DoctorLastName = context.Request.Form["DoctorLastName"];
-                        doctor.DoctorFirstName = context.Request.Form["DoctorFirstName"];
-                        doctor.DoctorSurname = context.Request.Form["DoctorSurname"];
-                        string specId = context.Request.Form["SpecializationId"];
-                        doctor.SpecializationId = !string.IsNullOrEmpty(specId) ? int.Parse(specId) : 0;
-                        doctor.ContactData = context.Request.Form["ContactData"];
-                        doctor.Password = context.Request.Form["Password"];
-                        context.Session.Set<Doctor>("doctor", doctor);
+                        string Doctor = context.Request.Form["DoctorId"];
+                        appointment.DoctorId = !string.IsNullOrEmpty(Doctor) ? int.Parse(Doctor) : 0;
+                        string Patient = context.Request.Form["PatientId"];
+                        appointment.PatientId = !string.IsNullOrEmpty(Patient) ? int.Parse(Patient) : 0;
+                        string Date = context.Request.Form["AppointmentDate"];
+                        appointment.AppointmentDate = string.IsNullOrEmpty(Date) ? DateOnly.FromDateTime(DateTime.Now) : DateOnly.Parse(Date);
+                        string Diagnos = context.Request.Form["DiagnosId"];
+                        appointment.DiagnosId = !string.IsNullOrEmpty(Diagnos) ? int.Parse(Diagnos) : 0;
+
+                        context.Session.Set<Appointment>("appointment", appointment);
                     }
 
-                    // Асинхронный вывод динамической HTML формы
                     await context.Response.WriteAsync(strResponse);
                 });
             });
-
 
 
 
             // Стартовая страница и кэширование данных таблицы на web-сервере
             app.Run((context) =>
             {
-                //обращение к сервису
+                // Обращение к сервису
                 ISpecializationsService iSpecializationsService = context.RequestServices.GetService<ISpecializationsService>();
                 iSpecializationsService.AddSpecializations("Specializations", iSpecializationsService.GetSpecializationsCount());
                 IDoctorsService iDoctorsService = context.RequestServices.GetService<IDoctorsService>();
@@ -533,48 +480,103 @@ namespace WebLab3
                 iReceptionsService.AddReceptions("Reception", iReceptionsService.GetReceptionsCount());
 
                 string HtmlString = "<HTML><HEAD><TITLE>Мед. клиника</TITLE></HEAD>" +
-                "<META http-equiv='Content-Type' content='text/html; charset=utf-8'/>" +
-                "<BODY><H1>Главная</H1>";
+                                    "<META http-equiv='Content-Type' content='text/html; charset=utf-8'/>" +
+                                    "<BODY><H1>Главная</H1>";
                 HtmlString += "<H2>Доступные таблицы:</H2>";
                 HtmlString += "<UL>";
-                HtmlString += "<LI><A href='/specializations'>Специализации</A></LI>";
-                HtmlString += "<LI><A href='/doctors'>Врачи</A></LI>";
-                HtmlString += "<LI><A href='/patients'>Пациенты</A></LI>";
-                HtmlString += "<LI><A href='/diagnosis'>Диагнозы</A></LI>";
-                HtmlString += "<LI><A href='/appointments'>Приемы</A></LI>";
-                HtmlString += "<LI><A href='/medicaments'>Лекарства</A></LI>";
-                HtmlString += "<LI><A href='/receptions'>Рецепты</A></LI>";
+                    HtmlString += "<LI><A href='/specializations'>Специализации</A></LI>";
+                    HtmlString += "<LI><A href='/doctors'>Врачи</A></LI>";
+                    HtmlString += "<LI><A href='/patients'>Пациенты</A></LI>";
+                    HtmlString += "<LI><A href='/diagnosis'>Диагнозы</A></LI>";
+                    HtmlString += "<LI><A href='/appointments'>Приемы</A></LI>";
+                    HtmlString += "<LI><A href='/medicaments'>Лекарства</A></LI>";
+                    HtmlString += "<LI><A href='/receptions'>Рецепты</A></LI>";
                 HtmlString += "</UL>";
                 HtmlString += "<H2>Доп. данные:</H2>";
                 HtmlString += "<UL>";
-                HtmlString += "<LI><A href='/searchform1'>Данные о докторах (Cookies)</A></LI>";
-                HtmlString += "<LI><A href='/searchform2'>Данные о докторах (Session)</A></LI>";
+                    HtmlString += "<LI><A href='/searchform1'>Данные о приемах (Cookies)</A></LI>";
+                    HtmlString += "<LI><A href='/searchform2'>Данные о приемах (Session)</A></LI>";
                 HtmlString += "</UL>";
                 HtmlString += "</BODY></HTML>";
                 return context.Response.WriteAsync(HtmlString);
-
             });
 
             app.Run();
         }
 
+        // Вывод содержания
         static string PrintContentInTables()
         {
-            string HtmlString = "<BR><TABLE BORDER=1 style='border-spacing: 0;'>";
-            HtmlString += "<TR>";
-            HtmlString += "<TH style='padding: 0;'><A href='/'>Главная</A></TH>";
-            HtmlString += "</TR>";
-            HtmlString += "<TR><TH style='border: 1px solid white; padding: 0;'></TH>";
-            HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/specializations'>Специализации</A></TH>";
-            HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/doctors'>Врачи</A></TH>";
-            HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/patients'>Пациенты</A></TH>";
-            HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/diagnosis'>Диагнозы</A></TH>";
-            HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/appointments'>Приемы</A></TH>";
-            HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/medicaments'>Лекарства</A></TH>";
-            HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/receptions'>Рецепты</A></TH>";
-            HtmlString += "</TR></TABLE>";
+            string HtmlString = "<BR>";
+            HtmlString += "<TABLE BORDER=1 style='border-spacing: 0;'>";
+                HtmlString += "<TR>";
+                    HtmlString += "<TH style='padding: 0;'><A href='/'>Главная</A></TH>";
+                HtmlString += "</TR>";
+                HtmlString += "<TR>";
+                    HtmlString += "<TH style='border: 1px solid white; padding: 0;'></TH>";
+                    HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/specializations'>Специализации</A></TH>";
+                    HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/doctors'>Врачи</A></TH>";
+                    HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/patients'>Пациенты</A></TH>";
+                    HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/diagnosis'>Диагнозы</A></TH>";
+                    HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/appointments'>Приемы</A></TH>";
+                    HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/medicaments'>Лекарства</A></TH>";
+                    HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/receptions'>Рецепты</A></TH>";
+                HtmlString += "</TR>";
+            HtmlString += "</TABLE>";
 
             return HtmlString;
+        }
+
+        // Форма для просмотра информации
+        public static string GenerateForm(HttpContext context, int doctorId, int patientId, DateOnly appointmentDate, int diagnosId, string str)
+        {
+            var db = context.RequestServices.GetService<HospitalContext>();
+            List<Diagnos> diagnosis = db.Diagnosis.ToList();
+            diagnosis.Sort();
+            List<Doctor> doctors = db.Doctors.ToList();
+            doctors.Sort();
+            List<Patient> patients = db.Patients.ToList();
+            patients.Sort();
+
+            string strResponse = $"<HTML><HEAD><TITLE>{str}</TITLE></HEAD>" +
+                                 "<META http-equiv='Content-Type' content='text/html; charset=utf-8'/>" +
+                                 "<BODY><TABLE BORDER><TR><TH><A href='/'>Главная</A></TH></TR></TABLE><BR>" +
+                                 "<FORM method='POST'>" +
+                                 "ФИО доктора:<BR><SELECT name='DoctorId'>";
+
+            foreach (var doctor in doctors)
+            {
+                strResponse += $"<option value='{doctor.DoctorId}'" +
+                               $"{(doctorId == doctor.DoctorId ? " selected" : "")}>" +
+                               $"{doctor.DoctorLastName + " " + doctor.DoctorFirstName + " " + doctor.DoctorSurname}</option>";
+            }
+
+            strResponse += "</SELECT><BR><BR>" +
+                           "ФИО пациента:<BR><SELECT name='PatientId'>";
+
+            foreach (var patient in patients)
+            {
+                strResponse += $"<option value='{patient.PatientId}'" +
+                               $"{(patientId == patient.PatientId ? " selected" : "")}>" +
+                               $"{patient.PatientLastName + " " + patient.PatientFirstName + " " + patient.PatientSurname}</option>";
+            }
+
+            strResponse += "</SELECT><BR><BR>" +
+                           "Дата приема:<BR><INPUT type='date' name='AppointmentDate' value='" + appointmentDate.ToString("yyyy-MM-dd") + "'><BR><BR>" +
+                           "Диагноз:<BR><SELECT name='DiagnosId'>";
+
+            foreach (var diagnos in diagnosis)
+            {
+                strResponse += $"<option value='{diagnos.DiagnosId}'" +
+                               $"{(diagnosId == diagnos.DiagnosId ? " selected" : "")}>" +
+                               $"{diagnos.DiagnosName}</option>";
+            }
+
+            strResponse += "</SELECT><BR><BR>" +
+                           $"<INPUT type='submit' value='Сохранить в {str}'>" +
+                           "<INPUT type='submit' value='Показать'></FORM></BODY></HTML>";
+
+            return strResponse;
         }
     }
 }
