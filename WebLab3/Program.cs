@@ -68,6 +68,8 @@ namespace WebLab3
             // Добавление поддержки Session
             app.UseSession();
 
+
+
             // Вывод информации о клиенте
             app.Map("/info", (appBuilder) =>
             {
@@ -76,7 +78,7 @@ namespace WebLab3
                     // Формирование строки для вывода 
                     string strResponse = "<HTML><HEAD><TITLE>Информация</TITLE></HEAD>" +
                     "<META http-equiv='Content-Type' content='text/html; charset=utf-8'/>" +
-                    "<BODY><TABLE BORDER><TR><TH><A href='/'>Главная</A></TH></TR></TABLE><H1>Информация:</H1>";
+                    "<BODY><TABLE BORDER><TR><TH style='padding: 0; width: 100px;'><A href='/'>Главная</A></TH></TR></TABLE><H1>Информация:</H1>";
                     strResponse += "<BR> Сервер: " + context.Request.Host;
                     strResponse += "<BR> Путь: " + context.Request.PathBase;
                     strResponse += "<BR> Протокол: " + context.Request.Protocol;
@@ -508,12 +510,13 @@ namespace WebLab3
         static string PrintContentInTables()
         {
             string HtmlString = "<BR>";
-            HtmlString += "<TABLE BORDER=1 style='border-spacing: 0;'>";
+            HtmlString += "<TABLE BORDER=1>";
                 HtmlString += "<TR>";
-                    HtmlString += "<TH style='padding: 0;'><A href='/'>Главная</A></TH>";
+                    HtmlString += "<TH style='padding: 0; width: 100px;'><A href='/'>Главная</A></TH>";
                 HtmlString += "</TR>";
+            HtmlString += "</TABLE>";
+            HtmlString += "<TABLE BORDER=1 style='margin-left: 53px; margin-top: 3px'>";
                 HtmlString += "<TR>";
-                    HtmlString += "<TH style='border: 1px solid white; padding: 0;'></TH>";
                     HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/specializations'>Специализации</A></TH>";
                     HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/doctors'>Врачи</A></TH>";
                     HtmlString += "<TH style='border: 1px solid black; padding: 0;'><A href='/patients'>Пациенты</A></TH>";
@@ -538,11 +541,11 @@ namespace WebLab3
             List<Patient> patients = db.Patients.ToList();
             patients.Sort();
 
-            string strResponse = $"<HTML><HEAD><TITLE>{str}</TITLE></HEAD>" +
+            string strResponse = $"<HTML><HEAD><TITLE>Добавление приема в {str}</TITLE></HEAD>" +
                                  "<META http-equiv='Content-Type' content='text/html; charset=utf-8'/>" +
-                                 "<BODY><TABLE BORDER><TR><TH><A href='/'>Главная</A></TH></TR></TABLE><BR>" +
-                                 "<FORM method='POST'>" +
-                                 "ФИО доктора:<BR><SELECT name='DoctorId'>";
+                                 "<BODY><TABLE BORDER><TR><TH style='padding: 0; width: 100px;'><A href='/'>Главная</A></TH></TR></TABLE>" +
+                                 "<H1>Данные приема:</H1><TABLE BORDER=1><TR><TH><BR><FORM style='margin-left:10px; margin-right:10px' method='POST'>" +
+                                 "ФИО доктора:<BR><SELECT style='width: 350px;' padding: 0;' name='DoctorId'>";
 
             foreach (var doctor in doctors)
             {
@@ -552,7 +555,7 @@ namespace WebLab3
             }
 
             strResponse += "</SELECT><BR><BR>" +
-                           "ФИО пациента:<BR><SELECT name='PatientId'>";
+                           "ФИО пациента:<BR><SELECT style='width: 350px;' name='PatientId'>";
 
             foreach (var patient in patients)
             {
@@ -563,7 +566,7 @@ namespace WebLab3
 
             strResponse += "</SELECT><BR><BR>" +
                            "Дата приема:<BR><INPUT type='date' name='AppointmentDate' value='" + appointmentDate.ToString("yyyy-MM-dd") + "'><BR><BR>" +
-                           "Диагноз:<BR><SELECT name='DiagnosId'>";
+                           "Диагноз:<BR><SELECT style='width: 350px;' name='DiagnosId'>";
 
             foreach (var diagnos in diagnosis)
             {
@@ -573,8 +576,8 @@ namespace WebLab3
             }
 
             strResponse += "</SELECT><BR><BR>" +
-                           $"<INPUT type='submit' value='Сохранить в {str}'>" +
-                           "<INPUT type='submit' value='Показать'></FORM></BODY></HTML>";
+                           $"<INPUT style='width: 150px;' type='submit' value='Сохранить в {str}'>" +
+                           "<INPUT style='width: 150px; margin-left:50px;' type='submit' value='Показать'></FORM></TH></TR></TABLE></BODY></HTML>";
 
             return strResponse;
         }

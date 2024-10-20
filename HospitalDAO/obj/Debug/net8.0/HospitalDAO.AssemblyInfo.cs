@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HospitalDAO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e8132b2058088b2ee189df7a9186ad624c41c34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51a77a64b2dbdf216a7732de6e66c6662f638d82")]
 [assembly: System.Reflection.AssemblyProductAttribute("HospitalDAO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HospitalDAO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

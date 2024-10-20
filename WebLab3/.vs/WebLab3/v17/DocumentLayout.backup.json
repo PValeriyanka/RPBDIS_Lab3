@@ -7,37 +7,105 @@
       "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\specialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\iappointmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\idoctorsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\reception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\appointmentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\medicament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\diagnosisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\diagnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\receptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\imedicamentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\ireceptionsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\infrastructure\\sessionextentions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\data\\hospitalcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\reception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\medicamentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\ispecializationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\doctorsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\specializationsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\patientsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\ipatientsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\services\\idiagnosisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\specialization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\medicament.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38CCD7A9-12CE-41FC-BAA2-DD80A750A6AF}|..\\HospitalDAO\\HospitalDAO.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\hospitaldao\\models\\diagnos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C0E5A68D-8B51-4108-AB2B-F31A1739D65F}|WebLab3.csproj|d:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0440\u043F\u0431\u0434\u0438\u0441\\lab3\\weblab3\\weblab3.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -58,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,33 +134,136 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Specialization.cs",
-              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Specialization.cs",
-              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Specialization.cs",
-              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Specialization.cs",
-              "RelativeToolTip": "..\\HospitalDAO\\Models\\Specialization.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "IDoctorsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IDoctorsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\IDoctorsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IDoctorsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\IDoctorsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T09:00:29.457Z",
+              "WhenOpened": "2024-10-20T09:43:47.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Patient.cs",
-              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Patient.cs",
-              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Patient.cs",
-              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Patient.cs",
-              "RelativeToolTip": "..\\HospitalDAO\\Models\\Patient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABFAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAABgCAAAAAAAAAAAkwCICAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T08:59:31.726Z",
+              "WhenOpened": "2024-10-20T00:49:45.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAppointmentsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IAppointmentsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\IAppointmentsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IAppointmentsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\IAppointmentsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:43:39.466Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "AppointmentsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\AppointmentsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\AppointmentsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\AppointmentsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\AppointmentsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:42:23.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DiagnosisService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\DiagnosisService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\DiagnosisService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\DiagnosisService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\DiagnosisService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:42:53.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReceptionsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\ReceptionsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\ReceptionsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\ReceptionsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\ReceptionsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:44:42.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IMedicamentsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IMedicamentsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\IMedicamentsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IMedicamentsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\IMedicamentsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:43:51.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Appointment.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Appointment.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Models\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T08:04:59.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SessionExtentions.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Infrastructure\\SessionExtentions.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Infrastructure\\SessionExtentions.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Infrastructure\\SessionExtentions.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Infrastructure\\SessionExtentions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:41:18.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-20T00:49:44.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Reception.cs",
               "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Reception.cs",
               "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Reception.cs",
@@ -105,46 +276,169 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Appointment.cs",
-              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Appointment.cs",
-              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Appointment.cs",
-              "RelativeToolTip": "..\\HospitalDAO\\Models\\Appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "IReceptionsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IReceptionsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\IReceptionsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IReceptionsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\IReceptionsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T08:04:59.625Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Medicament.cs",
-              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Medicament.cs",
-              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Medicament.cs",
-              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Medicament.cs",
-              "RelativeToolTip": "..\\HospitalDAO\\Models\\Medicament.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T08:05:48.02Z",
+              "WhenOpened": "2024-10-20T09:43:57.329Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Doctor.cs",
-              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Doctor.cs",
-              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Doctor.cs",
-              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Doctor.cs",
-              "RelativeToolTip": "..\\HospitalDAO\\Models\\Doctor.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T08:55:08.974Z",
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T09:45:44.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
+              "Title": "MedicamentsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\MedicamentsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\MedicamentsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\MedicamentsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\MedicamentsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:44:03.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ISpecializationsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\ISpecializationsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\ISpecializationsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\ISpecializationsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\ISpecializationsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:44:00.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DoctorsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\DoctorsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\DoctorsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\DoctorsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\DoctorsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:43:16.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HospitalContext.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Data\\HospitalContext.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Data\\HospitalContext.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Data\\HospitalContext.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Data\\HospitalContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:40:57.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SpecializationsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\SpecializationsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\SpecializationsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\SpecializationsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\SpecializationsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:44:58.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:45:33.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T09:45:39.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T09:45:41.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-20T09:45:45.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PatientsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\PatientsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\PatientsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\PatientsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\PatientsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:44:22.957Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-20T00:58:33.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -152,50 +446,95 @@
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T08:00:50.033Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T08:00:50.033Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAUwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-20T00:58:33.303Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAkCAAAAAAAAAAAAADACAACRAAAAAAAAAA==",
+              "DocumentIndex": 25,
+              "Title": "IPatientsService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IPatientsService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\IPatientsService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IPatientsService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\IPatientsService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T00:49:45.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T09:43:54.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 26,
+              "Title": "IDiagnosisService.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IDiagnosisService.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Services\\IDiagnosisService.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Services\\IDiagnosisService.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Services\\IDiagnosisService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:43:45.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Patient.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Patient.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Models\\Patient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T08:59:31.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Medicament.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Medicament.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Medicament.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Medicament.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Models\\Medicament.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T08:05:48.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Doctor.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Doctor.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Doctor.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Models\\Doctor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T08:55:08.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
               "Title": "Diagnos.cs",
               "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Diagnos.cs",
               "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Diagnos.cs",
               "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Diagnos.cs",
               "RelativeToolTip": "..\\HospitalDAO\\Models\\Diagnos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T08:57:19.263Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T08:57:19.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 27,
+              "Title": "Specialization.cs",
+              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Specialization.cs",
+              "RelativeDocumentMoniker": "..\\HospitalDAO\\Models\\Specialization.cs",
+              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\HospitalDAO\\Models\\Specialization.cs",
+              "RelativeToolTip": "..\\HospitalDAO\\Models\\Specialization.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T09:00:29.457Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\Asus\\AppData\\Roaming\\Microsoft\\UserSecrets\\b97df810-9318-4d59-8d28-7d526f4f6e57\\secrets.json",
               "ToolTip": "C:\\Users\\Asus\\AppData\\Roaming\\Microsoft\\UserSecrets\\b97df810-9318-4d59-8d28-7d526f4f6e57\\secrets.json",
@@ -205,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 32,
               "Title": "WebLab3",
               "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\WebLab3.csproj",
               "RelativeDocumentMoniker": "WebLab3.csproj",
@@ -216,7 +555,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 33,
               "Title": "WebLab3.csproj",
               "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\WebLab3.csproj",
               "RelativeDocumentMoniker": "WebLab3.csproj",
@@ -225,18 +564,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-10-20T00:50:54.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\3-\u0438\u0439 \u043A\u0443\u0440\u0441\\\u0420\u041F\u0411\u0414\u0418\u0421\\Lab3\\WebLab3\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-20T00:49:44.431Z"
             }
           ]
         },
