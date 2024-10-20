@@ -29,9 +29,11 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
-    - name: Install dependencies
-      run: dotnet restore
+    - name: Restore dependencies
+      run: dotnet restore WebLab3/WebLab3.sln
       
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-    
+      run: dotnet build WebLab3/WebLab3.sln --no-restore
+      
+    - name: Test
+      run: dotnet test WebLab3/WebLab3.sln --no-build --verbosity normal
