@@ -2,8 +2,10 @@ using HospitalDAO.Data;
 using HospitalDAO.Infrastructure;
 using HospitalDAO.Models;
 using HospitalDAO.Services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using static System.Net.WebRequestMethods;
 
 namespace WebLab3
 {
@@ -397,30 +399,32 @@ namespace WebLab3
 
 
 
-            app.Map("/searchform1", (appBuilder) =>
+            app.Map("/searchform1", (appBuilder) => 
             {
-                appBuilder.Run(async (context) =>
+                appBuilder.Run(async (context) => 
                 {
-                    // Считывание из Cookies 
+
+                    if (context.Request.Method == "POST")
+                    {
+                        context.Response.Cookies.Append("DoctorId", context.Request.Form["DoctorId"]);
+                        context.Response.Cookies.Append("PatientId", context.Request.Form["PatientId"]);
+                        context.Response.Cookies.Append("AppointmentDate", context.Request.Form["AppointmentDate"]);
+
+                        context.Response.Redirect("/searchform1");
+                        return;
+                    }
+
+                    // Считывание данных из Cookies
                     string Doctor = context.Request.Cookies["DoctorId"];
                     int DoctorId = !string.IsNullOrEmpty(Doctor) ? int.Parse(Doctor) : 0;
                     string Patient = context.Request.Cookies["PatientId"];
                     int PatientId = !string.IsNullOrEmpty(Patient) ? int.Parse(Patient) : 0;
                     string Date = context.Request.Cookies["AppointmentDate"];
                     DateOnly AppointmentDate = string.IsNullOrEmpty(Date) ? DateOnly.FromDateTime(DateTime.Now) : DateOnly.Parse(Date);
-                    string Diagnos = context.Request.Cookies["DiagnosId"];
-                    int DiagnosId = !string.IsNullOrEmpty(Diagnos) ? int.Parse(Diagnos) : 0;
+                    int DiagnosId = SearchDiagnos(context, DoctorId, PatientId, AppointmentDate);
 
+                    // Генерация формы с обновлёнными данными
                     string strResponse = GenerateForm(context, DoctorId, PatientId, AppointmentDate, DiagnosId, "Cookies");
-
-                    // Загрузка данных в Cookies
-                    if (context.Request.Method == "POST")
-                    {
-                        context.Response.Cookies.Append("DoctorId", context.Request.Form["DoctorId"]);
-                        context.Response.Cookies.Append("PatientId", context.Request.Form["PatientId"]);
-                        context.Response.Cookies.Append("AppointmentDate", context.Request.Form["AppointmentDate"]);
-                        context.Response.Cookies.Append("DiagnosId", context.Request.Form["DiagnosId"]);
-                    }
 
                     await context.Response.WriteAsync(strResponse);
                 });
@@ -432,15 +436,17 @@ namespace WebLab3
 
 
 
-            app.Map("/searchform2", (appBuilder) =>
-            {
-                appBuilder.Run(async (context) =>
-                {
-                    // Считывание из Session объекта Appointmment
+            app.Map("/searchform2", (appBuilder) => {
+                appBuilder.Run(async (context) => {
+
+                    // Считывание из Session объекта Appointment
                     Appointment appointment = context.Session.Get<Appointment>("appointment") ?? new Appointment();
-
-                    string strResponse = GenerateForm(context, appointment.DoctorId, appointment.PatientId, appointment.AppointmentDate, appointment.DiagnosId, "Session");
-
+                    if (appointment.AppointmentDate == default)
+                    {
+                        appointment.AppointmentDate = DateOnly.FromDateTime(DateTime.Now);
+                        appointment.DiagnosId = -1;
+                    }
+                    
                     // Загрузка данных в Session
                     if (context.Request.Method == "POST")
                     {
@@ -450,11 +456,12 @@ namespace WebLab3
                         appointment.PatientId = !string.IsNullOrEmpty(Patient) ? int.Parse(Patient) : 0;
                         string Date = context.Request.Form["AppointmentDate"];
                         appointment.AppointmentDate = string.IsNullOrEmpty(Date) ? DateOnly.FromDateTime(DateTime.Now) : DateOnly.Parse(Date);
-                        string Diagnos = context.Request.Form["DiagnosId"];
-                        appointment.DiagnosId = !string.IsNullOrEmpty(Diagnos) ? int.Parse(Diagnos) : 0;
+                        appointment.DiagnosId = SearchDiagnos(context, appointment.DoctorId, appointment.PatientId, appointment.AppointmentDate);
 
                         context.Session.Set<Appointment>("appointment", appointment);
                     }
+
+                    string strResponse = GenerateForm(context, appointment.DoctorId, appointment.PatientId, appointment.AppointmentDate, appointment.DiagnosId, "Session");
 
                     await context.Response.WriteAsync(strResponse);
                 });
@@ -464,7 +471,7 @@ namespace WebLab3
 
             // Стартовая страница и кэширование данных таблицы на web-сервере
             app.Run((context) =>
-            {
+                {
                 // Обращение к сервису
                 ISpecializationsService iSpecializationsService = context.RequestServices.GetService<ISpecializationsService>();
                 iSpecializationsService.AddSpecializations("Specializations", iSpecializationsService.GetSpecializationsCount());
@@ -545,7 +552,8 @@ namespace WebLab3
                                  "<META http-equiv='Content-Type' content='text/html; charset=utf-8'/>" +
                                  "<BODY><TABLE BORDER><TR><TH style='padding: 0; width: 100px;'><A href='/'>Главная</A></TH></TR></TABLE>" +
                                  "<H1>Данные приема:</H1><TABLE BORDER=1><TR><TH><BR><FORM style='margin-left:10px; margin-right:10px' method='POST'>" +
-                                 "ФИО доктора:<BR><SELECT style='width: 350px;' padding: 0;' name='DoctorId'>";
+                                 "<input type='hidden' name='isSubmitted' value='true' />" +
+                                 "ФИО доктора:<BR><SELECT style='width: 400px;' padding: 0;' name='DoctorId'>";
 
             foreach (var doctor in doctors)
             {
@@ -555,7 +563,7 @@ namespace WebLab3
             }
 
             strResponse += "</SELECT><BR><BR>" +
-                           "ФИО пациента:<BR><SELECT style='width: 350px;' name='PatientId'>";
+                           "ФИО пациента:<BR><SELECT style='width: 400px;' name='PatientId'>";
 
             foreach (var patient in patients)
             {
@@ -566,20 +574,56 @@ namespace WebLab3
 
             strResponse += "</SELECT><BR><BR>" +
                            "Дата приема:<BR><INPUT type='date' name='AppointmentDate' value='" + appointmentDate.ToString("yyyy-MM-dd") + "'><BR><BR>" +
-                           "Диагноз:<BR><SELECT style='width: 350px;' name='DiagnosId'>";
+                           "<BR><INPUT style='width: 200px;' type='submit' value='Найти диагноз'>";
 
-            foreach (var diagnos in diagnosis)
+            if (diagnosId == -1)
+                strResponse += "<P>Данных не найдено</P>";
+            else
             {
-                strResponse += $"<option value='{diagnos.DiagnosId}'" +
-                               $"{(diagnosId == diagnos.DiagnosId ? " selected" : "")}>" +
-                               $"{diagnos.DiagnosName}</option>";
+                bool flag = false;
+                int i = 0;
+
+                while (!flag && i < diagnosis.Count())
+                {
+                    if (diagnosis[i].DiagnosId == diagnosId)
+                    {
+                        flag = true;
+                        strResponse += $"<P>Диагноз: {diagnosis[i].DiagnosName}</P>";
+                    }
+                    i++;
+                }
+                if (!flag)
+                {
+                    strResponse += "<P>Данных не найдено</P>";
+                }
             }
 
-            strResponse += "</SELECT><BR><BR>" +
-                           $"<INPUT style='width: 150px;' type='submit' value='Сохранить в {str}'>" +
-                           "<INPUT style='width: 150px; margin-left:50px;' type='submit' value='Показать'></FORM></TH></TR></TABLE></BODY></HTML>";
+            strResponse += "</FORM></TH></TR></TABLE></BODY></HTML>";
 
             return strResponse;
         }
+
+        static int SearchDiagnos(HttpContext context, int doctorId, int patientId, DateOnly appointmentDate)
+        {
+            var db = context.RequestServices.GetService<HospitalContext>();
+            List<Appointment> appointments = db.Appointments.ToList();
+
+            bool flag = false;
+            int i = 0;
+
+            int diagnosId = -1;
+
+            while (!flag && i < appointments.Count())
+            {
+                if (appointments[i].DoctorId == doctorId && appointments[i].PatientId == patientId && appointments[i].AppointmentDate == appointmentDate)
+                {
+                    flag = true;
+                    diagnosId = appointments[i].DiagnosId;
+                }
+                i++;
+            }
+
+            return diagnosId;
+        } 
     }
 }
